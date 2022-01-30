@@ -12,10 +12,7 @@
 
         window.addEventListener("load", function () {
             var CONTENT_ID = "172948_f_962346"
-            var myPlayer = dacast(CONTENT_ID, 'myDiv', {
-                width: 800,
-                height: 600
-            });
+            var myPlayer = dacast(CONTENT_ID, 'myDiv', {});
 
             myPlayer.onComplete(function () {
                 alert('The video is finished! Hope you liked it!')
