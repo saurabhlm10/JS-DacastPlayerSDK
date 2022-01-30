@@ -15,7 +15,7 @@
             var myPlayer = dacast(CONTENT_ID, 'myDiv', {});
 
             myPlayer.onComplete(function () {
-                alert('The video is finished! Hope you liked it!')
+                window.ReactNativeWebView.postMessage("video_finished")
             });
         });
 
