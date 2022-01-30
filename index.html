@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dacast player API</title>
+    <script src="https://player.dacast.com/js/player.js?contentId=1552_f_297509"></script>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <script>
+
+        window.addEventListener("load", function () {
+            var CONTENT_ID = "172948_f_962346"
+            var myPlayer = dacast(CONTENT_ID, 'myDiv', {
+                width: 800,
+                height: 600
+            });
+
+            myPlayer.onComplete(function () {
+                alert('The video is finished! Hope you liked it!')
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+<!-- https://iframe.dacast.com/b/172948/f/962346 -->
