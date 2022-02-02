@@ -3,46 +3,46 @@
 
 <head>
     <title>Dacast Player</title>
-    <script src="https://player.dacast.com/js/player.js?contentId=1552_f_297509"></script>
+    <script src="https://player.dacast.com/js/player.js"></script>
     <style>
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-progress-control,
-            .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-progress-control {
-                height: 10;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-progress-control,
+        .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-progress-control {
+            height: 16px;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-progress-control .vjs-progress-holder,
-            .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-progress-control .vjs-progress-holder {
-                height: 10;
-                margin: 0;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-progress-control .vjs-progress-holder,
+        .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-progress-control .vjs-progress-holder {
+            height: 16px;
+            margin-bottom: 10px;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar {
-                height: 100;
-                padding: 8;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar {
+            height: 100px;
+            padding: 32px;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-control.vjs-button {
-                width: 60px !important;
-                padding: 16px 16px !important;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-control.vjs-button {
+            width: 50px !important;
+            padding: 16px 16px !important;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-control:before {
-                font-size: 40px !important;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-control:before {
+            font-size: 50px !important;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-time-control,
-            .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-time-control {
-                font-size: 30px;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-time-control,
+        .theoplayer-skin.theo-mobile:not(.theo-seekbar-inside-controls) .theo-player-wrapper .vjs-control-bar .vjs-time-control {
+            font-size: 25px;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .theo-settings-control-button {
-                display: none;
-            }
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .theo-settings-control-button {
+            display: none;
+        }
 
-            .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-play-control.vjs-playing:before {
-                font-size: 60px !important;
-            }
-        
+        .theoplayer-skin .theo-player-wrapper .vjs-control-bar .vjs-play-control.vjs-playing:before {
+            font-size: 50px !important;
+        }
+
     </style>
 </head>
 
@@ -58,6 +58,7 @@
             myPlayer.onComplete(function () {
                 window.ReactNativeWebView.postMessage("video_finished")
             });
+
         });
     </script>
 </body>
