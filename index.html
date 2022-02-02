@@ -9,8 +9,7 @@
 <body>
     <div id="myDiv"></div>
     <script>
-        var url = window.location.pathname;
-        var contentID = url.substring(url.lastIndexOf('/') + 1);
+        var contentID = url.searchParams.get("id");
         window.addEventListener("load", function () {
             var myPlayer = dacast(contentID, 'myDiv', {});
             myPlayer.onComplete(function () {
