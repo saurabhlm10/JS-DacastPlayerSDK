@@ -12,11 +12,9 @@
         var queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const contentID = urlParams.get('id')
+
         window.addEventListener("load", function () {
-            var myPlayer = dacast(contentID, 'myDiv', {
-              width: 350, 
-              height: 200 
-            })
+            var myPlayer = dacast(contentID, 'myDiv', {});
             myPlayer.onComplete(function () {
                 window.ReactNativeWebView.postMessage("video_finished")
             });
