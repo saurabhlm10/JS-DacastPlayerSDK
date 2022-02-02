@@ -13,7 +13,10 @@
         const urlParams = new URLSearchParams(queryString);
         const contentID = urlParams.get('id')
         window.addEventListener("load", function () {
-            var myPlayer = dacast(contentID, 'myDiv', {});
+            var myPlayer = dacast(contentID, 'myDiv', {
+              width: 350, 
+              height: 200 
+            })
             myPlayer.onComplete(function () {
                 window.ReactNativeWebView.postMessage("video_finished")
             });
