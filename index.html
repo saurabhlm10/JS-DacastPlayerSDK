@@ -2,23 +2,21 @@
 <html>
 
 <head>
-    <title>Dacast player API</title>
+    <title>Dacast Player</title>
     <script src="https://player.dacast.com/js/player.js?contentId=1552_f_297509"></script>
 </head>
 
 <body>
     <div id="myDiv"></div>
     <script>
-
+        var url = window.location.pathname;
+        var contentID = url.substring(url.lastIndexOf('/') + 1);
         window.addEventListener("load", function () {
-            var CONTENT_ID = "172948_f_962346"
-            var myPlayer = dacast(CONTENT_ID, 'myDiv', {});
-
+            var myPlayer = dacast(contentID, 'myDiv', {});
             myPlayer.onComplete(function () {
                 window.ReactNativeWebView.postMessage("video_finished")
             });
         });
-
     </script>
 </body>
 
