@@ -54,7 +54,7 @@
         const contentID = urlParams.get('id')
 
         window.addEventListener("load", function () {
-            var myPlayer = dacast(contentID, 'myDiv', {});
+            var myPlayer = dacast('4949b23d-cdb7-b1d7-8b3c-f03acbcdae0b-vod-ac58187e-06a5-4bc5-99b1-e5d6a46c46d4', 'myDiv', {});
             myPlayer.onComplete(function () {
                 window.ReactNativeWebView.postMessage("video_finished")
             });
